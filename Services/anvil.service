@@ -1,0 +1,10 @@
+[Unit]
+Description=Ornn's Anvil CTF banner
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/socat TCP-LISTEN:31337,fork,reuseaddr EXEC:/opt/anvil.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
